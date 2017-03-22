@@ -66,7 +66,7 @@ int te_message_arrived(void* context,int type,char *send_userid,char* topic_name
 	{
 		case TOPIC_PUBLISH_MESSAGE:
 		case CHAT_TO_CHAT_MESSAGE:
-        case GROUP_PUBLISH_MESSAGE:
+        	case GROUP_PUBLISH_MESSAGE:
 		{
 			payloadptr = message->payload;
 			memcpy(buf,payloadptr,512);   //+20170207
@@ -74,10 +74,10 @@ int te_message_arrived(void* context,int type,char *send_userid,char* topic_name
 			sendnTTY(ptty,buf,9); 
 			for(i=0; i<message->payload_len; i++)
 			{
-                if(isprint(*payloadptr))
-					putchar(*payloadptr++);
-                else
-                    printf("\\x%2x", (unsigned char)*payloadptr++);
+                             if(isprint(*payloadptr))
+			     	putchar(*payloadptr++);
+                             else
+                    		printf("\\x%2x", (unsigned char)*payloadptr++);
 			}
 			printf("\n");
 		}
@@ -86,7 +86,7 @@ int te_message_arrived(void* context,int type,char *send_userid,char* topic_name
 		default:
 		{
 			printf("send type unkown send id is %s and topic: %s\n",send_userid,topic_name);
-		    printf("   message: ");
+		    	printf("   message: ");
 
 			payloadptr = message->payload;
 			for(i=0; i<message->payload_len; i++)
@@ -112,7 +112,7 @@ void message_send_success(void* context, et_context_success_data* response)
     {
         char *msg = calloc(1, response->alt.pub.message.payload_len + 1);
         memcpy(msg, (char *)response->alt.pub.message.payload, response->alt.pub.message.payload_len);
-    //��    printf("now send message success: %s\n",msg);
+    /*   printf("now send message success: %s\n",msg);*/
         free(msg);
     }
 
@@ -295,7 +295,6 @@ void discover_fail(void* context,  et_context_failure_data* response)
 
 	}
 }
-
 
 /***************************************************2017-02-16********************************************************************/
 int main(int argc, char* argv[])
