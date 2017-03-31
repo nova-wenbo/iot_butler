@@ -69,8 +69,8 @@ int te_message_arrived(void* context,int type,char *send_userid,char* topic_name
         	case GROUP_PUBLISH_MESSAGE:
 		{
 			payloadptr = message->payload;
-			memcpy(buf,payloadptr,512);   //+20170207
-			//printf("msg:%s\n",buf);
+			memcpy(buf,payloadptr,9);   //+20170207
+			printf("msg:%s\n",buf);
 			sendnTTY(ptty,buf,9); 
 			for(i=0; i<message->payload_len; i++)
 			{
@@ -301,11 +301,11 @@ int main(int argc, char* argv[])
 {
 	et_context client;
 	int v = 0,vx = 0;
-	char name[128] = "Fc5wGsTuvumomVomAibJDH9jLH2M6mW9hk";
-	char *userid[2]={"Fc5wGsTuvumomVomA9G8eu59ZmUKEVFf6q"};
+	char name[128] = "Fc5wGsTuvumomVom5Y8cGkgLbeQWGWjvui";
+	char *userid[1]={"Fc5wGsTuvumomVom7nrUt4ZVJ3okYqkDBZ"};
 
 	char server[128] = "lb.kaifakuai.com";
-	char appkey[128] = "42ff8fca-902a-862532";
+	char appkey[128] = "c2ee23ec-a759-396052";
 	char sdkversion_str[1024] = {0};
 	unsigned char buff[9];	
 	et_get_sdk_version(sdkversion_str,1024);
@@ -322,7 +322,7 @@ int main(int argc, char* argv[])
 	}
 
 	lockTTY(ptty);
-	if(setTTYSpeed(ptty,115200)>0)
+	if(setTTYSpeed(ptty,9600)>0)
 	{
 		printf("setTTYSpeed() error\n");
 		return -1;
@@ -415,6 +415,7 @@ int main(int argc, char* argv[])
         printf("\niot:");
 	nbyte = recvnTTY(ptty,buff,8); 
 	buff[nbyte] = '\0';
+	printf("%s\n",buff);
         memset(str_input,0,sizeof(str_input));
      //   fgets(str_input, sizeof(str_input), stdin);
 	strcpy(str_input, buff);

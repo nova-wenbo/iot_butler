@@ -1,0 +1,1009 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         29/Dec/2016  19:22:01 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          Source\light.c                                     #
+#    Command line       =  -f C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack- #
+#                          CC2530-2.3.0-1.4.0\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg   #
+#                          (-DCPU32MHZ -DROOT=__near_func -DBLINK_LEDS) -f    #
+#                          C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg     #
+#                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF1                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          Source\light.c -D ZIGBEEPRO -D NWK_AUTO_POLL -D    #
+#                          ZTOOL_P1 -D xMT_TASK -D xMT_SYS_FUNC -D            #
+#                          xMT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC            #
+#                          C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\EndDeviceEB-Pro\List\ -lA                 #
+#                          C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\EndDeviceEB-Pro\List\ --diag_suppress     #
+#                          Pe001,Pa010 -o C:\Users\Administrator\Desktop\±œ…Ë #
+#                          28∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\EndDeviceEB-Pro\Obj\ -e    #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack- #
+#                          CC2530-2.3.0-1.4.0\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\ -I C:\Users\Administrator\Desktop\±œ… #
+#                          Ë28∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\SOURCE\ -I             #
+#                          C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\ZMAIN\TI2530DB\ -I               #
+#                          C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\..\..\COMPONENTS\MT\ -I          #
+#                          C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\    #
+#                          -I C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack- #
+#                          CC2530-2.3.0-1.4.0\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\C #
+#                          C2530EB\ -I C:\Users\Administrator\Desktop\±œ…Ë28∫ #
+#                          ≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\OSA #
+#                          L\MCU\CCSOC\ -I C:\Users\Administrator\Desktop\±œ… #
+#                          Ë28∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS #
+#                          \OSAL\INCLUDE\ -I C:\Users\Administrator\Desktop\± #
+#                          œ…Ë28∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ #
+#                          Samples\SampleApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\STACK\AF\ -I C:\Users\Administrator\Desktop\±œ… #
+#                          Ë28∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS #
+#                          \STACK\NWK\ -I C:\Users\Administrator\Desktop\±œ…Ë #
+#                          28∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\ #
+#                          STACK\SEC\ -I C:\Users\Administrator\Desktop\±œ…Ë2 #
+#                          8∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samp #
+#                          les\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\S #
+#                          TACK\SAPI\ -I C:\Users\Administrator\Desktop\±œ…Ë2 #
+#                          8∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samp #
+#                          les\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\S #
+#                          TACK\SYS\ -I C:\Users\Administrator\Desktop\±œ…Ë28 #
+#                          ∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sampl #
+#                          es\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\ST #
+#                          ACK\ZDO\ -I C:\Users\Administrator\Desktop\±œ…Ë28∫ #
+#                          ≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\ZMA #
+#                          C\F8W\ -I C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ #
+#                          ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\ #
+#                          SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ #
+#                           -I C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack #
+#                          -CC2530-2.3.0-1.4.0\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SA #
+#                          DDR\ -I C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZS #
+#                          tack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\COMPONENTS\SERVICE #
+#                          S\SDATA\ -I C:\Users\Administrator\Desktop\±œ…Ë28∫ #
+#                          ≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sample #
+#                          s\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\MAC #
+#                          \INCLUDE\ -I C:\Users\Administrator\Desktop\±œ…Ë28 #
+#                          ∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Sampl #
+#                          es\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\MA #
+#                          C\HIGH_LEVEL\ -I C:\Users\Administrator\Desktop\±œ #
+#                          …Ë28∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\S #
+#                          amples\SampleApp\CC2530DB\..\..\..\..\..\COMPONENT #
+#                          S\MAC\LOW_LEVEL\srf04\ -I                          #
+#                          C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\s #
+#                          rf04\SINGLE_CHIP\ -Ohz --require_prototypes        #
+#    List file          =  C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\EndDeviceEB-Pro\List\light.lst            #
+#    Object file        =  C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2 #
+#                          530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\EndDeviceEB-Pro\Obj\light.r51             #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Administrator\Desktop\±œ…Ë28∫≈\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\Source\light.c
+      1          //***************************************
+      2          // B_LUX_V20≤…ºØ≥Ã–Ú
+      3          //****************************************
+      4          #include  <math.h>    //Keil library  
+      5          #include  <stdio.h>   //Keil library
+      6          #include "light.h"
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      7          #include "OnBoard.h"
+      8          #include "DHT11.h"
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      9          unsigned char    BUF_0[8];                       //Ω” ’ ˝æ›ª∫¥Ê«¯      	
+   \                     BUF_0:
+   \   000000                DS 8
+   \   000008                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     10          unsigned int   dis_data_0;                     //±‰¡ø
+   \                     dis_data_0:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+     11          
+     12          /*------------------------------------------------
+     13          ---------------------
+     14           π¶ƒ‹√Ë ˆ: —” ±ƒ…√Î ≤ªÕ¨µƒπ§◊˜ª∑æ≥,–Ë“™µ˜’˚¥À∫Ø ˝
+     15           ≤Œ ˝Àµ√˜: Œﬁ	
+     16           ∫Ø ˝∑µªÿ: Œﬁ
+     17           ---------------------------------------------------------------------*/
+     18          /*void B_LUX_delay_nms(unsigned int k)	
+     19          {						
+     20            unsigned int i,j;				
+     21            for(i=0;i<k;i++)
+     22            {			
+     23              for(j=0;j<6000;j++)			
+     24              {
+     25                ;
+     26              }
+     27            }						
+     28          }	*/				
+     29          
+     30          
+     31          /*---------------------------------------------------------------------
+     32           π¶ƒ‹√Ë ˆ: —” ±5Œ¢√Î  ≤ªÕ¨µƒπ§◊˜ª∑æ≥,–Ë“™µ˜’˚¥À∫Ø ˝
+     33           ≤Œ ˝Àµ√˜: Œﬁ	
+     34           ∫Ø ˝∑µªÿ: Œﬁ
+     35           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     36          void B_LUX_Delay5us()
+   \                     B_LUX_Delay5us:
+     37          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     38            unsigned char n = 5;
+   \   000000   7805         MOV     R0,#0x5
+   \   000002   8008         SJMP    ??B_LUX_Delay5us_0
+     39            
+     40            while (n--)
+     41            {
+     42              asm("NOP");
+   \                     ??B_LUX_Delay5us_1:
+   \   000004   00           NOP
+     43              asm("NOP");
+   \   000005   00           NOP
+     44              asm("NOP");
+   \   000006   00           NOP
+     45              asm("NOP");
+   \   000007   00           NOP
+     46              asm("NOP");
+   \   000008   00           NOP
+     47              asm("NOP");
+   \   000009   00           NOP
+     48              asm("NOP");
+   \   00000A   00           NOP
+     49              asm("NOP");   
+   \   00000B   00           NOP
+     50            }
+   \                     ??B_LUX_Delay5us_0:
+   \   00000C   E8           MOV     A,R0
+   \   00000D   F9           MOV     R1,A
+   \   00000E   74FF         MOV     A,#-0x1
+   \   000010   29           ADD     A,R1
+   \   000011   18           DEC     R0
+   \   000012   04           INC     A
+   \   000013   70EF         JNZ     ??B_LUX_Delay5us_1
+     51          }
+   \   000015   02....       LJMP    ?BRET
+     52          
+     53          /*---------------------------------------------------------------------
+     54           π¶ƒ‹√Ë ˆ: —” ±5∫¡√Î  ≤ªÕ¨µƒπ§◊˜ª∑æ≥,–Ë“™µ˜’˚¥À∫Ø ˝
+     55           ≤Œ ˝Àµ√˜: Œﬁ	
+     56           ∫Ø ˝∑µªÿ: Œﬁ
+     57           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     58          void B_LUX_Delay5ms()
+   \                     B_LUX_Delay5ms:
+     59          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+     60            unsigned int n = 5;
+   \   000005   7E05         MOV     R6,#0x5
+   \   000007   7F00         MOV     R7,#0x0
+     61            unsigned char i;
+     62            while(n--)
+   \                     ??B_LUX_Delay5ms_0:
+   \   000009   EE           MOV     A,R6
+   \   00000A   F8           MOV     R0,A
+   \   00000B   EF           MOV     A,R7
+   \   00000C   F9           MOV     R1,A
+   \   00000D   E8           MOV     A,R0
+   \   00000E   24FF         ADD     A,#-0x1
+   \   000010   1E           DEC     R6
+   \   000011   E9           MOV     A,R1
+   \   000012   34FF         ADDC    A,#-0x1
+   \   000014   FF           MOV     R7,A
+   \   000015   E8           MOV     A,R0
+   \   000016   49           ORL     A,R1
+   \   000017   600E         JZ      ??B_LUX_Delay5ms_1
+     63            {
+     64              for(i=0;i<200;i++)
+   \   000019   75..C8       MOV     ?V0 + 0,#-0x38
+     65               B_LUX_Delay5us();
+   \                     ??B_LUX_Delay5ms_2:
+   \   00001C                ; Setup parameters for call to function B_LUX_Delay5us
+   \   00001C   12....       LCALL   ??B_LUX_Delay5us?relay
+   \   00001F   15..         DEC     ?V0 + 0
+   \   000021   E5..         MOV     A,?V0 + 0
+   \   000023   60E4         JZ      ??B_LUX_Delay5ms_0
+   \   000025   80F5         SJMP    ??B_LUX_Delay5ms_2
+     66            }
+     67          }
+   \                     ??B_LUX_Delay5ms_1:
+   \   000027   80..         SJMP    ??Subroutine4_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine4_0:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+     68          
+     69          /*---------------------------------------------------------------------
+     70           π¶ƒ‹√Ë ˆ: ∆ º–≈∫≈
+     71           ≤Œ ˝Àµ√˜: Œﬁ	
+     72           ∫Ø ˝∑µªÿ: Œﬁ
+     73           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     74          void B_LUX_Start()
+   \                     B_LUX_Start:
+     75          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     76            B_LUX_SDA0_H;                    //¿≠∏ﬂ ˝æ›œﬂ
+   \   000004   D291         SETB    0x90.1
+     77            B_LUX_SCL0_H;                    //¿≠∏ﬂ ±÷”œﬂ
+   \   000006   D290         SETB    0x90.0
+     78            B_LUX_Delay5us();                 //—” ±
+   \   000008                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000008   12....       LCALL   ??B_LUX_Delay5us?relay
+     79            B_LUX_SDA0_L;                    //≤˙…˙œ¬Ωµ—ÿ
+   \   00000B   C291         CLR     0x90.1
+     80            B_LUX_Delay5us();                 //—” ±
+   \   00000D                ; Setup parameters for call to function B_LUX_Delay5us
+   \   00000D   12....       LCALL   ?Subroutine3 & 0xFFFF
+     81            B_LUX_SCL0_L;                    //¿≠µÕ ±÷”œﬂ
+     82          }
+   \                     ??CrossCallReturnLabel_2:
+   \   000010                REQUIRE ?Subroutine0
+   \   000010                REQUIRE _A_P1
+   \   000010                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   12....       LCALL   ??B_LUX_Delay5us?relay
+   \   000003   C290         CLR     0x90.0
+   \   000005   22           RET
+     83          
+     84          /*---------------------------------------------------------------------
+     85           π¶ƒ‹√Ë ˆ: Õ£÷π–≈∫≈
+     86           ≤Œ ˝Àµ√˜: Œﬁ	
+     87           ∫Ø ˝∑µªÿ: Œﬁ
+     88           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     89          void B_LUX_Stop()
+   \                     B_LUX_Stop:
+     90          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     91            B_LUX_SDA0_L;                    //¿≠µÕ ˝æ›œﬂ
+   \   000004   C291         CLR     0x90.1
+     92            B_LUX_SCL0_H;                    //¿≠∏ﬂ ±÷”œﬂ
+   \   000006   D290         SETB    0x90.0
+     93            B_LUX_Delay5us();                 //—” ±
+   \   000008                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000008   12....       LCALL   ??B_LUX_Delay5us?relay
+     94            B_LUX_SDA0_H;                    //≤˙…˙…œ…˝—ÿ
+   \   00000B   D291         SETB    0x90.1
+     95            B_LUX_Delay5us();                 //—” ±
+   \   00000D                ; Setup parameters for call to function B_LUX_Delay5us
+   \   00000D   12....       LCALL   ?Subroutine2 & 0xFFFF
+     96            B_LUX_SCL0_L;
+     97            B_LUX_Delay5us();
+     98          }
+   \                     ??CrossCallReturnLabel_0:
+   \   000010   80..         SJMP    ?Subroutine0
+   \   000012                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   000003                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000003                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000003   12....       LCALL   ??B_LUX_Delay5us?relay
+   \   000006   22           RET
+     99          
+    100          /*---------------------------------------------------------------------
+    101           π¶ƒ‹√Ë ˆ: ∑¢ÀÕ”¶¥–≈∫≈
+    102           ≤Œ ˝Àµ√˜: ack - ”¶¥–≈∫≈(0:ACK 1:NAK)
+    103           ∫Ø ˝∑µªÿ: Œﬁ
+    104           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    105          void B_LUX_SendACK(unsigned char ack)
+   \                     B_LUX_SendACK:
+    106          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+    107            if (ack&0x01)	B_LUX_SDA0_H;		 //–¥”¶¥–≈∫≈
+   \   000006   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000008   5004         JNC     ??B_LUX_SendACK_0
+   \   00000A   D291         SETB    0x90.1
+   \   00000C   8002         SJMP    ??B_LUX_SendACK_1
+    108            else	B_LUX_SDA0_L;
+   \                     ??B_LUX_SendACK_0:
+   \   00000E   C291         CLR     0x90.1
+    109            
+    110            B_LUX_SCL0_H;                    //¿≠∏ﬂ ±÷”œﬂ
+   \                     ??B_LUX_SendACK_1:
+   \   000010   D290         SETB    0x90.0
+    111            B_LUX_Delay5us();                 //—” ±
+   \   000012                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000012   12....       LCALL   ?Subroutine3 & 0xFFFF
+    112            B_LUX_SCL0_L;                    //¿≠µÕ ±÷”œﬂ
+    113            B_LUX_SDA0_H;
+   \                     ??CrossCallReturnLabel_3:
+   \   000015   D291         SETB    0x90.1
+    114            B_LUX_Delay5us();                 //—” ±
+   \   000017                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000017   12....       LCALL   ??B_LUX_Delay5us?relay
+    115          }
+   \   00001A   80..         SJMP    ??Subroutine4_0
+   \   00001C                REQUIRE _A_P1
+    116          
+    117          /*---------------------------------------------------------------------
+    118           π¶ƒ‹√Ë ˆ: Ω” ’”¶¥–≈∫≈
+    119           ≤Œ ˝Àµ√˜: Œﬁ
+    120           ∫Ø ˝∑µªÿ: ∑µªÿ”¶¥–≈∫≈
+    121           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   F9           MOV     R1,A
+   \   000001                REQUIRE ??Subroutine4_0
+   \   000001                ; // Fall through to label ??Subroutine4_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    122          unsigned char B_LUX_RecvACK()
+   \                     B_LUX_RecvACK:
+    123          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+    124            unsigned char CY = 0x00;
+    125            B_LUX_SDA0_H;
+   \   000005   D291         SETB    0x90.1
+    126            
+    127            B_LUX_SDA0_I;
+   \   000007   53FEFD       ANL     0xfe,#0xfd
+    128            
+    129            B_LUX_SCL0_H;              //¿≠∏ﬂ ±÷”œﬂ
+   \   00000A   D290         SETB    0x90.0
+    130            B_LUX_Delay5us();                 //—” ±
+   \   00000C                ; Setup parameters for call to function B_LUX_Delay5us
+   \   00000C   12....       LCALL   ??B_LUX_Delay5us?relay
+    131            
+    132            
+    133            CY |= B_LUX_SDA0_DAT;    //∂¡”¶¥–≈∫≈
+   \   00000F   E590         MOV     A,0x90
+   \   000011   FE           MOV     R6,A
+    134            
+    135            B_LUX_Delay5us();                 //—” ±
+   \   000012                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000012   12....       LCALL   ?Subroutine3 & 0xFFFF
+    136            
+    137            B_LUX_SCL0_L;              //¿≠µÕ ±÷”œﬂ
+    138            
+    139            B_LUX_SDA0_O;
+   \                     ??CrossCallReturnLabel_4:
+   \   000015   43FE02       ORL     0xfe,#0x2
+    140            
+    141            return CY;
+   \   000018   EE           MOV     A,R6
+   \   000019   A2E1         MOV     C,0xE0 /* A   */.1
+   \   00001B   E4           CLR     A
+   \   00001C   33           RLC     A
+   \   00001D   80..         SJMP    ?Subroutine1
+   \   00001F                REQUIRE _A_P1
+   \   00001F                REQUIRE P1DIR
+    142          }
+    143          
+    144          /*---------------------------------------------------------------------
+    145           π¶ƒ‹√Ë ˆ: œÚIIC◊‹œﬂ∑¢ÀÕ“ª∏ˆ◊÷Ω⁄ ˝æ›
+    146           ≤Œ ˝Àµ√˜: dat - –¥◊÷Ω⁄
+    147           ∫Ø ˝∑µªÿ: Œﬁ
+    148           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    149          void B_LUX_SendByte(unsigned char dat)
+   \                     B_LUX_SendByte:
+    150          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FF           MOV     R7,A
+    151            unsigned char i;
+    152            
+    153            for (i=0; i<8; i++)         			//8Œªº∆ ˝∆˜
+   \   000007   7E08         MOV     R6,#0x8
+    154            {
+    155              if (dat&0x80)	B_LUX_SDA0_H;
+   \                     ??B_LUX_SendByte_0:
+   \   000009   EF           MOV     A,R7
+   \   00000A   A2E7         MOV     C,0xE0 /* A   */.7
+   \   00000C   5004         JNC     ??B_LUX_SendByte_1
+   \   00000E   D291         SETB    0x90.1
+   \   000010   8002         SJMP    ??B_LUX_SendByte_2
+    156              else	B_LUX_SDA0_L;              //ÀÕ ˝æ›ø⁄
+   \                     ??B_LUX_SendByte_1:
+   \   000012   C291         CLR     0x90.1
+    157              
+    158              B_LUX_Delay5us();             			//—” ±
+   \                     ??B_LUX_SendByte_2:
+   \   000014                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000014   12....       LCALL   ??B_LUX_Delay5us?relay
+    159              B_LUX_SCL0_H;                		//¿≠∏ﬂ ±÷”œﬂ
+   \   000017   D290         SETB    0x90.0
+    160              B_LUX_Delay5us();             			//—” ±
+   \   000019                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000019   12....       LCALL   ?Subroutine2 & 0xFFFF
+    161              B_LUX_SCL0_L;                		//¿≠µÕ ±÷”œﬂ
+    162              B_LUX_Delay5us();             			//—” ±
+    163              dat <<= 1;              			//“∆≥ˆ ˝æ›µƒ◊Ó∏ﬂŒª
+   \                     ??CrossCallReturnLabel_1:
+   \   00001C   EF           MOV     A,R7
+   \   00001D   C3           CLR     C
+   \   00001E   33           RLC     A
+   \   00001F   FF           MOV     R7,A
+    164            }
+   \   000020   1E           DEC     R6
+   \   000021   EE           MOV     A,R6
+   \   000022   70E5         JNZ     ??B_LUX_SendByte_0
+    165            
+    166            B_LUX_RecvACK();
+   \   000024                ; Setup parameters for call to function B_LUX_RecvACK
+   \   000024   12....       LCALL   ??B_LUX_RecvACK?relay
+    167          }
+   \   000027   80..         SJMP    ??Subroutine4_0
+   \   000029                REQUIRE _A_P1
+    168          
+    169          /*---------------------------------------------------------------------
+    170           π¶ƒ‹√Ë ˆ: ¥”IIC◊‹œﬂΩ” ’“ª∏ˆ◊÷Ω⁄ ˝æ›
+    171           ≤Œ ˝Àµ√˜: Œﬁ
+    172           ∫Ø ˝∑µªÿ: Ω” ’◊÷Ω⁄
+    173           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    174          unsigned char B_LUX_RecvByte()
+   \                     B_LUX_RecvByte:
+    175          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+    176            unsigned char i;
+    177            unsigned char dat = 0;
+   \   000005   7E00         MOV     R6,#0x0
+    178            B_LUX_SDA0_I;
+   \   000007   53FEFD       ANL     0xfe,#0xfd
+    179            
+    180            B_LUX_SDA0_H;                  // πƒ‹ƒ⁄≤ø…œ¿≠,◊º±∏∂¡»° ˝æ›,
+   \   00000A   D291         SETB    0x90.1
+    181            for (i=0; i<8; i++)         	//8Œªº∆ ˝∆˜
+   \   00000C   7F08         MOV     R7,#0x8
+    182            {
+    183              B_LUX_SCL0_H;              //¿≠∏ﬂ ±÷”œﬂ
+   \                     ??B_LUX_RecvByte_0:
+   \   00000E   D290         SETB    0x90.0
+    184              B_LUX_Delay5us();             	//—” ±
+   \   000010                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000010   12....       LCALL   ??B_LUX_Delay5us?relay
+    185              dat |= B_LUX_SDA0_DAT;     //∂¡ ˝æ›               
+   \   000013   E590         MOV     A,0x90
+   \   000015   F5..         MOV     ?V0 + 0,A
+    186              B_LUX_SCL0_L;              //¿≠µÕ ±÷”œﬂ
+   \   000017   C290         CLR     0x90.0
+    187              B_LUX_Delay5us();             	//—” ±
+   \   000019                ; Setup parameters for call to function B_LUX_Delay5us
+   \   000019   12....       LCALL   ??B_LUX_Delay5us?relay
+    188              
+    189              dat <<= 1;	
+   \   00001C   7402         MOV     A,#0x2
+   \   00001E   55..         ANL     A,?V0 + 0
+   \   000020   F8           MOV     R0,A
+   \   000021   EE           MOV     A,R6
+   \   000022   C3           CLR     C
+   \   000023   33           RLC     A
+   \   000024   48           ORL     A,R0
+   \   000025   FE           MOV     R6,A
+    190            }
+   \   000026   1F           DEC     R7
+   \   000027   EF           MOV     A,R7
+   \   000028   70E4         JNZ     ??B_LUX_RecvByte_0
+    191            B_LUX_SDA0_O;
+   \   00002A   43FE02       ORL     0xfe,#0x2
+    192            
+    193            return dat;
+   \   00002D   EE           MOV     A,R6
+   \   00002E   02....       LJMP    ?Subroutine1 & 0xFFFF
+   \   000031                REQUIRE P1DIR
+   \   000031                REQUIRE _A_P1
+    194          }
+    195          
+    196          /*---------------------------------------------------------------------
+    197           π¶ƒ‹√Ë ˆ: –¥BH1750
+    198           ≤Œ ˝Àµ√˜: REG_Address - ºƒ¥Ê∆˜µÿ÷∑
+    199           ∫Ø ˝∑µªÿ: Œﬁ
+    200           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    201          void B_LUX_Single_Write(unsigned char REG_Address)
+   \                     B_LUX_Single_Write:
+    202          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FE           MOV     R6,A
+    203            B_LUX_Start();                  //∆ º–≈∫≈
+   \   000007                ; Setup parameters for call to function B_LUX_Start
+   \   000007   12....       LCALL   ??B_LUX_Start?relay
+    204            B_LUX_SendByte(B_LUX_SlaveAddress);   //∑¢ÀÕ…Ë±∏µÿ÷∑+–¥–≈∫≈
+   \   00000A                ; Setup parameters for call to function B_LUX_SendByte
+   \   00000A   7946         MOV     R1,#0x46
+   \   00000C   12....       LCALL   ??B_LUX_SendByte?relay
+    205            B_LUX_SendByte(REG_Address);    //ƒ⁄≤øºƒ¥Ê∆˜µÿ÷∑£¨«Î≤Œøº÷–Œƒpdf22“≥ 
+   \   00000F                ; Setup parameters for call to function B_LUX_SendByte
+   \   00000F   EE           MOV     A,R6
+   \   000010   F9           MOV     R1,A
+   \   000011   12....       LCALL   ??B_LUX_SendByte?relay
+    206            //  BH1750_SendByte(REG_data);       //ƒ⁄≤øºƒ¥Ê∆˜ ˝æ›£¨«Î≤Œøº÷–Œƒpdf22“≥ 
+    207            B_LUX_Stop();                   //∑¢ÀÕÕ£÷π–≈∫≈
+   \   000014                ; Setup parameters for call to function B_LUX_Stop
+   \   000014   12....       LCALL   ??B_LUX_Stop?relay
+    208          }
+   \   000017   02....       LJMP    ??Subroutine4_0 & 0xFFFF
+    209          
+    210          /*---------------------------------------------------------------------
+    211           π¶ƒ‹√Ë ˆ: ¡¨–¯∂¡≥ˆBH1750ƒ⁄≤ø ˝æ›
+    212           ≤Œ ˝Àµ√˜: Œﬁ
+    213           ∫Ø ˝∑µªÿ: Œﬁ
+    214           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    215          void B_LUX_Multiple_read(void)
+   \                     B_LUX_Multiple_read:
+    216          {   
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    217            unsigned char i;	
+    218            B_LUX_Start();                          //∆ º–≈∫≈
+   \   000005                ; Setup parameters for call to function B_LUX_Start
+   \   000005   12....       LCALL   ??B_LUX_Start?relay
+    219            B_LUX_SendByte(B_LUX_SlaveAddress+1);         //∑¢ÀÕ…Ë±∏µÿ÷∑+∂¡–≈∫≈
+   \   000008                ; Setup parameters for call to function B_LUX_SendByte
+   \   000008   7947         MOV     R1,#0x47
+   \   00000A   12....       LCALL   ??B_LUX_SendByte?relay
+    220            
+    221            for (i=0; i<3; i++)                        //¡¨–¯∂¡»°6∏ˆµÿ÷∑ ˝æ›£¨¥Ê¥¢÷–BUF
+   \   00000D   7E00         MOV     R6,#0x0
+    222            {
+    223              BUF_0[i] = B_LUX_RecvByte();          //BUF[0]¥Ê¥¢0x32µÿ÷∑÷–µƒ ˝æ›
+   \                     ??B_LUX_Multiple_read_0:
+   \   00000F                ; Setup parameters for call to function B_LUX_RecvByte
+   \   00000F   12....       LCALL   ??B_LUX_RecvByte?relay
+   \   000012   8E..         MOV     ?V0 + 0,R6
+   \   000014   74..         MOV     A,#BUF_0 & 0xff
+   \   000016   25..         ADD     A,?V0 + 0
+   \   000018   F582         MOV     DPL,A
+   \   00001A   74..         MOV     A,#(BUF_0 >> 8) & 0xff
+   \   00001C   3400         ADDC    A,#0x0
+   \   00001E   F583         MOV     DPH,A
+   \   000020   E9           MOV     A,R1
+   \   000021   F0           MOVX    @DPTR,A
+    224              if (i == 3)
+    225              {
+    226                
+    227                B_LUX_SendACK(1);                   //◊Ó∫Û“ª∏ˆ ˝æ›–Ë“™ªÿNOACK
+    228              }
+    229              else
+    230              {		
+    231                B_LUX_SendACK(0);                   //ªÿ”¶ACK
+   \   000022                ; Setup parameters for call to function B_LUX_SendACK
+   \   000022   7900         MOV     R1,#0x0
+   \   000024   12....       LCALL   ??B_LUX_SendACK?relay
+    232              }
+    233            }
+   \   000027   0E           INC     R6
+   \   000028   EE           MOV     A,R6
+   \   000029   C3           CLR     C
+   \   00002A   9403         SUBB    A,#0x3
+   \   00002C   40E1         JC      ??B_LUX_Multiple_read_0
+    234            
+    235            B_LUX_Stop();                           //Õ£÷π–≈∫≈
+   \   00002E                ; Setup parameters for call to function B_LUX_Stop
+   \   00002E   12....       LCALL   ??B_LUX_Stop?relay
+    236            B_LUX_Delay5ms();
+   \   000031                ; Setup parameters for call to function B_LUX_Delay5ms
+   \   000031   12....       LCALL   ??B_LUX_Delay5ms?relay
+    237          }
+   \   000034   7F02         MOV     R7,#0x2
+   \   000036   02....       LJMP    ?BANKED_LEAVE_XDATA
+    238          
+    239          /*---------------------------------------------------------------------
+    240           π¶ƒ‹√Ë ˆ: ≥ı ºªØπ‚’’¥´∏–∆˜
+    241           ≤Œ ˝Àµ√˜: Œﬁ
+    242           ∫Ø ˝∑µªÿ: Œﬁ
+    243           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    244          void B_LUX_Init()
+   \                     B_LUX_Init:
+    245          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    246            
+    247            P1SEL &= ~(0x030);
+   \   000004   53F4CF       ANL     0xf4,#0xcf
+    248            
+    249            B_LUX_SCL0_O;
+   \   000007   43FE01       ORL     0xfe,#0x1
+    250            B_LUX_SDA0_O;
+   \   00000A   43FE02       ORL     0xfe,#0x2
+    251            
+    252            //B_LUX_delay_nms(100);	    //—” ±100ms
+    253            Delay_ms(100);
+   \   00000D                ; Setup parameters for call to function Delay_ms
+   \   00000D   7A64         MOV     R2,#0x64
+   \   00000F   7B00         MOV     R3,#0x0
+   \   000011   12....       LCALL   ??Delay_ms?relay
+    254            B_LUX_Single_Write(0x01); 
+   \   000014                ; Setup parameters for call to function B_LUX_Single_Write
+   \   000014   7901         MOV     R1,#0x1
+   \   000016   12....       LCALL   ??B_LUX_Single_Write?relay
+    255            
+    256          }
+   \   000019   02....       LJMP    ?Subroutine0 & 0xFFFF
+   \   00001C                REQUIRE P1SEL
+   \   00001C                REQUIRE P1DIR
+    257          
+    258          /*---------------------------------------------------------------------
+    259           π¶ƒ‹√Ë ˆ: π‚’’∂¡»°∫Ø ˝
+    260           ≤Œ ˝Àµ√˜: Œﬁ
+    261           ∫Ø ˝∑µªÿ: ∑µªÿπ‚’’÷µ
+    262           ---------------------------------------------------------------------*/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    263          unsigned long B_LUX_GetLux()
+   \                     B_LUX_GetLux:
+    264          {  
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+    265            float temp;
+    266            B_LUX_Single_Write(0x01);   // power on
+   \   000005                ; Setup parameters for call to function B_LUX_Single_Write
+   \   000005   7901         MOV     R1,#0x1
+   \   000007   12....       LCALL   ??B_LUX_Single_Write?relay
+    267            B_LUX_Single_Write(0x10);   // H- resolution mode 
+   \   00000A                ; Setup parameters for call to function B_LUX_Single_Write
+   \   00000A   7910         MOV     R1,#0x10
+   \   00000C   12....       LCALL   ??B_LUX_Single_Write?relay
+    268            
+    269            //B_LUX_delay_nms(180);       //—” ±180ms
+    270            Delay_ms(180);
+   \   00000F                ; Setup parameters for call to function Delay_ms
+   \   00000F   7AB4         MOV     R2,#-0x4c
+   \   000011   7B00         MOV     R3,#0x0
+   \   000013   12....       LCALL   ??Delay_ms?relay
+    271            B_LUX_Multiple_read();      //¡¨–¯∂¡≥ˆ ˝æ›£¨¥Ê¥¢‘⁄BUF÷–
+   \   000016                ; Setup parameters for call to function B_LUX_Multiple_read
+   \   000016   12....       LCALL   ??B_LUX_Multiple_read?relay
+    272            
+    273            B_LUX_Single_Write(0x00);   // power off
+   \   000019                ; Setup parameters for call to function B_LUX_Single_Write
+   \   000019   7900         MOV     R1,#0x0
+   \   00001B   12....       LCALL   ??B_LUX_Single_Write?relay
+    274            
+    275            dis_data_0=BUF_0[0];
+    276            dis_data_0=(dis_data_0<<8)+BUF_0[1];//∫œ≥… ˝æ›£¨º¥π‚’’ ˝æ›
+   \   00001E   90....       MOV     DPTR,#BUF_0
+   \   000021   E0           MOVX    A,@DPTR
+   \   000022   F9           MOV     R1,A
+   \   000023   A3           INC     DPTR
+   \   000024   E0           MOVX    A,@DPTR
+   \   000025   90....       MOV     DPTR,#dis_data_0
+   \   000028   F0           MOVX    @DPTR,A
+   \   000029   A3           INC     DPTR
+   \   00002A   E9           MOV     A,R1
+   \   00002B   F0           MOVX    @DPTR,A
+    277            
+    278            temp=(float)dis_data_0/1.2;
+    279            return (unsigned long)(temp*1.4);
+   \   00002C   90....       MOV     DPTR,#dis_data_0
+   \   00002F   E0           MOVX    A,@DPTR
+   \   000030   F5..         MOV     ?V0 + 0,A
+   \   000032   A3           INC     DPTR
+   \   000033   E0           MOVX    A,@DPTR
+   \   000034   F5..         MOV     ?V0 + 1,A
+   \   000036   E4           CLR     A
+   \   000037   F5..         MOV     ?V0 + 2,A
+   \   000039   F5..         MOV     ?V0 + 3,A
+   \   00003B   78..         MOV     R0,#?V0 + 0
+   \   00003D   12....       LCALL   ?UL_TO_FLT
+   \   000040   90....       MOV     DPTR,#__Constant_3f99999a
+   \   000043   78..         MOV     R0,#?V0 + 4
+   \   000045   12....       LCALL   ?L_MOV_X
+   \   000048   78..         MOV     R0,#?V0 + 0
+   \   00004A   79..         MOV     R1,#?V0 + 4
+   \   00004C   12....       LCALL   ?FLT_DIV
+   \   00004F   90....       MOV     DPTR,#__Constant_3fb33333
+   \   000052   78..         MOV     R0,#?V0 + 4
+   \   000054   12....       LCALL   ?L_MOV_X
+   \   000057   78..         MOV     R0,#?V0 + 0
+   \   000059   79..         MOV     R1,#?V0 + 4
+   \   00005B   12....       LCALL   ?FLT_MUL
+   \   00005E   78..         MOV     R0,#?V0 + 0
+   \   000060   12....       LCALL   ?FLT_TO_UL
+   \   000063   AA..         MOV     R2,?V0 + 0
+   \   000065   AB..         MOV     R3,?V0 + 1
+   \   000067   AC..         MOV     R4,?V0 + 2
+   \   000069   AD..         MOV     R5,?V0 + 3
+   \   00006B   7F08         MOV     R7,#0x8
+   \   00006D   02....       LJMP    ?BANKED_LEAVE_XDATA
+    280            //return dis_data_0;
+    281            
+    282          } 
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_3f99999a:
+   \   000000   9A99993F     DD 3F99999AH
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_3fb33333:
+   \   000000   3333B33F     DD 3FB33333H
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_Delay5us?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_Delay5us
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_Delay5ms?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_Delay5ms
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_Start?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_Start
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_Stop?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_Stop
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_SendACK?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_SendACK
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_RecvACK?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_RecvACK
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_SendByte?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_SendByte
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_RecvByte?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_RecvByte
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_Single_Write?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_Single_Write
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_Multiple_read?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_Multiple_read
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??B_LUX_GetLux?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    B_LUX_GetLux
+    283          
+
+   Maximum stack usage in bytes:
+
+     Function                 ISTACK PSTACK XSTACK
+     --------                 ------ ------ ------
+     B_LUX_Delay5ms               0      0     19
+       -> B_LUX_Delay5us          0      0     18
+     B_LUX_Delay5us               0      0      9
+     B_LUX_GetLux                 0      0     16
+       -> B_LUX_Single_Write      0      0     32
+       -> B_LUX_Single_Write      0      0     32
+       -> Delay_ms                0      0     32
+       -> B_LUX_Multiple_read     0      0     32
+       -> B_LUX_Single_Write      0      0     32
+     B_LUX_Init                   2      0      0
+       -> Delay_ms                4      0      0
+       -> B_LUX_Single_Write      4      0      0
+     B_LUX_Multiple_read          1      0     26
+       -> B_LUX_Start             0      0     20
+       -> B_LUX_SendByte          0      0     20
+       -> B_LUX_RecvByte          0      0     20
+       -> B_LUX_SendACK           0      0     20
+       -> B_LUX_Stop              0      0     20
+       -> B_LUX_Delay5ms          0      0     20
+     B_LUX_RecvACK                0      0     18
+       -> B_LUX_Delay5us          0      0     18
+       -> B_LUX_Delay5us          0      0     18
+     B_LUX_RecvByte               0      0     19
+       -> B_LUX_Delay5us          0      0     18
+       -> B_LUX_Delay5us          0      0     18
+     B_LUX_SendACK                0      0     19
+       -> B_LUX_Delay5us          0      0     18
+       -> B_LUX_Delay5us          0      0     18
+     B_LUX_SendByte               0      0     19
+       -> B_LUX_Delay5us          0      0     18
+       -> B_LUX_Delay5us          0      0     18
+       -> B_LUX_Delay5us          0      0     18
+       -> B_LUX_RecvACK           0      0     18
+     B_LUX_Single_Write           0      0     25
+       -> B_LUX_Start             0      0     18
+       -> B_LUX_SendByte          0      0     18
+       -> B_LUX_SendByte          0      0     18
+       -> B_LUX_Stop              0      0     18
+     B_LUX_Start                  2      0     10
+       -> B_LUX_Delay5us          4      0      0
+       -> B_LUX_Delay5us          4      0      0
+     B_LUX_Stop                   2      0     10
+       -> B_LUX_Delay5us          4      0      0
+       -> B_LUX_Delay5us          4      0      0
+       -> B_LUX_Delay5us          4      0      0
+
+
+   Segment part sizes:
+
+     Function/Label              Bytes
+     --------------              -----
+     _A_P1                          1
+     P1SEL                          1
+     P1DIR                          1
+     BUF_0                          8
+     dis_data_0                     2
+     B_LUX_Delay5us                24
+     B_LUX_Delay5ms                41
+     ??Subroutine4_0                5
+     B_LUX_Start                   16
+     ?Subroutine0                   7
+     ?Subroutine3                   6
+     B_LUX_Stop                    18
+     ?Subroutine2                   7
+     B_LUX_SendACK                 28
+     ?Subroutine1                   1
+     B_LUX_RecvACK                 31
+     B_LUX_SendByte                41
+     B_LUX_RecvByte                49
+     B_LUX_Single_Write            26
+     B_LUX_Multiple_read           57
+     B_LUX_Init                    28
+     B_LUX_GetLux                 112
+     __Constant_3f99999a            4
+     __Constant_3fb33333            4
+     ??B_LUX_Delay5us?relay         6
+     ??B_LUX_Delay5ms?relay         6
+     ??B_LUX_Start?relay            6
+     ??B_LUX_Stop?relay             6
+     ??B_LUX_SendACK?relay          6
+     ??B_LUX_RecvACK?relay          6
+     ??B_LUX_SendByte?relay         6
+     ??B_LUX_RecvByte?relay         6
+     ??B_LUX_Single_Write?relay     6
+     ??B_LUX_Multiple_read?relay    6
+     ??B_LUX_Init?relay             6
+     ??B_LUX_GetLux?relay           6
+
+ 
+ 497 bytes in segment BANKED_CODE
+  72 bytes in segment BANK_RELAYS
+   3 bytes in segment SFR_AN
+   8 bytes in segment XDATA_ROM_C
+  10 bytes in segment XDATA_Z
+ 
+ 569 bytes of CODE  memory
+   0 bytes of CONST memory (+ 8 bytes shared)
+   0 bytes of DATA  memory (+ 3 bytes shared)
+  10 bytes of XDATA memory
+
+Errors: none
+Warnings: none

@@ -15,7 +15,7 @@ int main(int argc,char **argv)
 	} 
 
 	lockTTY(ptty); 
-	if(setTTYSpeed(ptty,115200)>0) 
+	if(setTTYSpeed(ptty, 9600)>0) 
 	{ 
 		printf("setTTYSpeed() error\n"); 
 		return -1; 

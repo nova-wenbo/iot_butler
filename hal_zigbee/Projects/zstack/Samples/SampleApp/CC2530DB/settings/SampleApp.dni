@@ -1,0 +1,78 @@
+[DebugChecksum]
+Checksum=-1621861653
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[CallStack]
+ShowArgs=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\Source\SampleApp.c}.365.1@1" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\..\Source\SampleApp-CH2O.c}.309.5@1" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$\..\Source\SampleApp-CH2O.c}.313.5@1" 0 0 0 0 "" 0 ""
+Count=3
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
+[Aliases]
+A0=_ "C:\Users\Administrator\Desktop\28\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\hal_timer.c" ""
+A1=_ "C:\Users\Administrator\Desktop\28\ZStack-CC2530-2.3.0-1.4.0\Components\zmac\f8w\zmac.c" ""
+A2=_ "C:\Users\Administrator\Desktop\28\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A3=_ "C:\Users\Administrator\Desktop\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\hal_dma.c" ""
+A4=_ "C:\Users\Administrator\Desktop\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\hal_timer.c" ""
+A5=_ "C:\Users\Administrator\Desktop\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_csp_tx.c" ""
+A6=_ "C:\Users\Administrator\Desktop\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mcu.c" ""
+A7=_ "C:\Users\Administrator\Desktop\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\zmac\f8w\zmac.c" ""
+A8=_ "C:\Users\Administrator\Desktop\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A9=_ "C:\Users\Administrator\Desktop\MQ5-DH11\毕设28号\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\Source\EndPoint.c" ""
+A10=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\_hal_uart_dma.c" ""
+A11=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\hal_dma.c" ""
+A12=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\hal_key.c" ""
+A13=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\hal_lcd.c" ""
+A14=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\hal_startup.c" ""
+A15=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\hal_uart.c" ""
+A16=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_csp_tx.c" ""
+A17=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mcu.c" ""
+A18=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mem.c" ""
+A19=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\osal\common\OSAL_Clock.c" ""
+A20=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\osal\common\OSAL_PwrMgr.c" ""
+A21=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\osal\common\OSAL_Timers.c" ""
+A22=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\services\saddr\saddr.c" ""
+A23=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\stack\nwk\nwk_globals.c" ""
+A24=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Components\zmac\f8w\zmac.c" ""
+A25=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\OnBoard.c" ""
+A26=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c" "E:\zigbee开发板v4\代码及其教程\3.高级篇-zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c"
+A27=_ "E:\zigbee\软件资料\软件资料\开发例程\5.zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\chipcon_cstartup.s51" ""
+A28=_ "E:\zigbee开发板v4\代码及其教程\3.高级篇-zigbee协议栈应用与组网\7.温湿度传感器DHT11\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+Count=29
+SuppressDialog=1
